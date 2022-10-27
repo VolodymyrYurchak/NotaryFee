@@ -51,14 +51,16 @@
 </head>
 <body>
     <div class="tab">
-        <button class="tablinks" onclick="openContract(event, 'buy-sell')">Купівля-продаж</button>
-        <button class="tablinks" onclick="openContract(event, 'deedOfGift')">Дарування</button>
-        <button class="tablinks" onclick="openContract(event, 'previous contract')">Попередній договір</button>
-        <button class="tablinks" onclick="openContract(event, 'mortgage')">Іпотека/застава/заборона</button>
+        <button class="tablinks" onclick="openContract(event, 'buy-selltab')">Купівля-продаж</button>
+        <button class="tablinks" onclick="openContract(event, 'deedOfGifttab')">Дарування</button>
+        <button class="tablinks" onclick="openContract(event, 'previous_contracttab')">Попередній договір</button>
+        <button class="tablinks" onclick="openContract(event, 'mortgagetab')">Іпотека/застава/заборона</button>
       </div>
-      <div id="buy-sell" class="tabcontent">
+      <div id="buy-selltab" class="tabcontent">
         <h3>Купівля-продаж</h3>
-        <p><input placeholder="Введіть суму договору" name="name" id="buy-sell" /><input type="checkbox"></p>
+        <p><input placeholder="Введіть суму договору" type="number" id="buy-sell"/>
+          <input type="checkbox" id="checkboxBS" checked> присутній податок
+        </p>
         
         <b>Нотаріальні послуги:</b>
         <p id="notaryServicesBS"></p>
@@ -66,28 +68,28 @@
         <p id="notaryFeeBS"></p>
         <b>Пенсійний податок:</b>
         <p id="pensionFeeBS"></p>
-        <b>Військовий збір:</b>
+        <b id="milTitleBS"> Військовий збір:</b>
         <p id="militaryFeeBS"></p>
-        <b>ПДФО:</b>
+        <b id="feeTitleBS">ПДФО:</b>
         <p id="receiveFeeBS"></p>
         <b>Всього (без нотаріальних послуг):</b>
         <p id="sumBS"></p>
             </p>
       </div>
       
-      <div id="deedOfGift" class="tabcontent">
+      <div id="deedOfGifttab" class="tabcontent">
         <h3>Дарування</h3>
-        <p><input placeholder="Введіть суму договору" name="name" id="deedOfGift" />
-            <p></p>
+        <p><input placeholder="Введіть суму договору" type="number" id="deedOfGift" />
+          <input type="checkbox" id="checkboxGift" checked> присутній податок</p>
             <b>Нотаріальні послуги:</b>
             <p id="notaryServicesGift"></p>
             <b>Нотаріальний збір:</b>
             <p id="notaryFeeGift"></p>
             <b>Пенсійний податок:</b>
             <p id="pensionFeeGift"></p>
-            <b>Військовий збір:</b>
+            <b id= "milTitleGift">Військовий збір:</b>
             <p id="militaryFeeGift"></p>
-            <b>ПДФО:</b>
+            <b id= "feeTitleGift">ПДФО:</b>
             <p id="receiveFeeGift"></p>
             <b>Всього (без нотаріальних послуг):</b>
             <p id="sumGift"></p>
@@ -95,28 +97,28 @@
         </div>
        
       
-    <div id="previous contract" class="tabcontent">
+    <div id="previous_contracttab" class="tabcontent">
         <h3>Попередній договір</h3>
-        <input placeholder="Введіть суму договору" name="name" id="buy-sell" />
+        <input placeholder="Введіть суму договору" type="number" id="previousContract" />
         <p></p>
             <b>Нотаріальні послуги:</b>
-            <p id="notaryServices"></p>
+            <p id="notaryServicesContract"></p>
             <b>Нотаріальний збір:</b>
-            <p id="notaryFee"></p>
+            <p id="notaryFeeContract"></p>
             <b>Всього (без нотаріальних послуг):</b>
-            <p id="sum"></p>
+            <p id="sumContract"></p>
                 </p>
     </div>
 
-    <div id="mortgage" class="tabcontent">
+    <div id="mortgagetab" class="tabcontent">
         <h3>Іпотека/Застава/Заборона</h3>
 
-    <input placeholder="Введіть суму договору" name="name" id="buy-sell" />
+    <input placeholder="Введіть суму договору" type="number" id="mortage" />
         <p></p>
         <b>Нотаріальні послуги:</b>
-        <p id="notaryServices"></p>
+        <p id="notaryServicesMortage"></p>
         <b>Нотаріальний збір:</b>
-        <p id="notaryFee"></p>
+        <p id="notaryFeeMortage"></p>
         <b>Всього (без нотаріальних послуг):</b>
         <p id="sum"></p>
     </div>
