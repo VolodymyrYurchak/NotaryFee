@@ -38,24 +38,24 @@
         }
         
         /* Style the tab content */
-        .tabcontent {
-          justify-content: flex-start;
+        .tabcontent>div {
+          display: flex;
+          justify-content: center;
           gap: 20px;
-          display: none;
           padding: 6px 12px;
           border: 1px solid #ccc;
           border-top: none;
         }
-
+        .tabcontent{
+          display: none;
+        }
         h3 {
-        text-align: center;
-        font-family: verdana;
-        font-size: 20px;
-        }    
+          text-align: center;
+        }
 
         p {
         font-family: verdana;
-        font-size: 15px;
+        font-size: 13px;
         }     
         </style>
     
@@ -67,10 +67,10 @@
         <button class="tablinks" onclick="openContract(event, 'previous_contracttab')">Попередній договір</button>
         <button class="tablinks" onclick="openContract(event, 'mortgagetab')">Іпотека/застава/заборона</button>
       </div>
-      <h3>Купівля-продаж</h3>
+      
       <div id="buy-selltab" class="tabcontent">
-        
-        
+        <h3>Купівля-продаж</h3>
+        <div>
         <div>
             <p><input placeholder="Введіть суму" type="number" id="buy-sell"/></p>
             <p><input type="checkbox" id="checkboxBS" checked> присутній податок</p>
@@ -90,11 +90,16 @@
             <p id="sumBS"></p>
         </div>
       </div>
-
+      </div>
+      
       <div id="deedOfGifttab" class="tabcontent">
         <h3>Дарування</h3>
-        <p><input placeholder="Введіть суму договору" type="number" id="deedOfGift" />
-          <input type="checkbox" id="checkboxGift" checked> присутній податок</p>
+        <div>
+          <div>
+        <p><input placeholder="Введіть суму" type="number" id="deedOfGift" /></p>
+        <p> <input type="checkbox" id="checkboxGift" checked> присутній податок</p>
+        </div>
+        <div>
             <b>Нотаріальні послуги:</b>
             <p id="notaryServicesGift"></p>
             <b>Нотаріальний збір:</b>
@@ -107,34 +112,43 @@
             <p id="receiveFeeGift"></p>
             <b>Всього (без нотаріальних послуг):</b>
             <p id="sumGift"></p>
-                </p>
+          </div>
+        </div>
         </div>
        
-      
+        
     <div id="previous_contracttab" class="tabcontent">
-        <h3>Попередній договір</h3>
-        <input placeholder="Введіть суму договору" type="number" id="previousContract" />
-        <p></p>
+      <h3>Попередній договір</h3>
+        <div>
+          <div>
+        <input placeholder="Введіть суму" type="number" id="previousContract" />
+        <p></p></div>
+        <div>
             <b>Нотаріальні послуги:</b>
             <p id="notaryServicesContract"></p>
             <b>Нотаріальний збір:</b>
             <p id="notaryFeeContract"></p>
             <b>Всього (без нотаріальних послуг):</b>
             <p id="sumContract"></p>
-                </p>
+          </div>
+        </div>
     </div>
-
+    
     <div id="mortgagetab" class="tabcontent">
-        <h3>Іпотека/Застава/Заборона</h3>
-
-    <input placeholder="Введіть суму договору" type="number" id="mortage" />
-        <p></p>
+      <h3>Іпотека/Застава/Заборона</h3>
+      <div>
+        <div>
+    <input placeholder="Введіть суму" type="number" id="mortage" />
+        <p></p></div>
+        <div>
         <b>Нотаріальні послуги:</b>
         <p id="notaryServicesMortage"></p>
         <b>Нотаріальний збір:</b>
         <p id="notaryFeeMortage"></p>
         <b>Всього (без нотаріальних послуг):</b>
         <p id="sum"></p>
+      </div>
+    </div>
     </div>
 </body>
 <script src="script.js"></script>
