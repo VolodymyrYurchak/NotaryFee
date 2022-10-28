@@ -142,6 +142,6 @@ function openContract(evt, contractName) {
 	}
 
 	// Show the current tab, and add an "active" class to the button that opened the tab
-	document.getElementById(contractName).style.display = 'block'
+	document.getElementById(contractName).style.display = 'flex'
 	evt.currentTarget.className += ' active'
 }
